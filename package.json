@@ -1,0 +1,47 @@
+{
+  "name": "jest-runner",
+  "displayName": "jest-runner",
+  "description": "Run jest tests seemlessly",
+  "version": "0.0.1",
+  "publisher": "monastic-panic",
+  "engines": {
+    "vscode": "^1.17.0"
+  },
+  "license": "MIT",
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./out/extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.sayHello",
+        "title": "Hello World"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "npm run compile && node ./node_modules/vscode/bin/test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^2.2.42",
+    "@types/node": "^7.0.43",
+    "typescript": "^2.6.1",
+    "vscode": "^1.1.10"
+  },
+  "dependencies": {
+    "babylon": "^6.18.0",
+    "babylon-walk": "^1.0.2",
+    "glob": "^7.1.2",
+    "jest-config": "^21.2.1",
+    "lodash": "^4.17.4",
+    "micromatch": "^3.1.4"
+  }
+}
